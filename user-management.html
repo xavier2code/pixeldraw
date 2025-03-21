@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>用户管理 - 像素工坊</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- 复用管理导航 -->
+    <nav class="pixel-border admin-nav">
+      <ul>
+        <li><a href="dashboard.html" class="pixel-button">仪表盘</a></li>
+        <li><a href="content-review.html" class="pixel-button">内容审核</a></li>
+        <li>
+          <a href="user-management.html" class="pixel-button active"
+            >用户管理</a
+          >
+        </li>
+        <li class="auth-buttons" style="margin-left: auto">
+          <a href="index.html" class="pixel-button">返回前台</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div
+      class="pixel-border container"
+      style="margin: 40px 20px; padding: 30px"
+    >
+      <!-- 用户筛选控制栏 -->
+      <div
+        class="user-controls"
+        style="
+          margin-bottom: 30px;
+          display: flex;
+          gap: 15px;
+          background: whitesmoke;
+        "
+      >
+        <input
+          type="text"
+          placeholder="搜索用户..."
+          class="pixel-search"
+          style="flex-grow: 1"
+        />
+        <div class="filter-buttons">
+          <button class="pixel-button active">全部</button>
+          <button class="pixel-button">普通用户</button>
+          <button class="pixel-button">管理员</button>
+        </div>
+      </div>
+
+      <!-- 用户列表 -->
+      <div class="user-list">
+        <!-- 单个用户条目 -->
+        <div
+          class="pixel-card"
+          style="
+            margin-bottom: 20px;
+            display: grid;
+            grid-template-columns: 60px 1fr 150px;
+            gap: 20px;
+            align-items: center;
+          "
+        >
+          <div
+            class="user-avatar"
+            style="
+              background: #ff6b6b;
+              width: 60px;
+              height: 60px;
+              border-radius: 50%;
+            "
+          ></div>
+          <div>
+            <h3>像素达人</h3>
+            <div
+              class="user-meta"
+              style="display: flex; gap: 15px; margin-top: 8px"
+            >
+              <span>注册时间：2024-02-01</span>
+              <span>作品数：24</span>
+            </div>
+          </div>
+          <div style="text-align: right">
+            <div
+              class="user-status pixel-card"
+              style="
+                background: var(--accent-color2);
+                padding: 4px 8px;
+                margin-bottom: 8px;
+              "
+            >
+              普通用户
+            </div>
+            <div class="action-buttons" style="display: flex; gap: 8px">
+              <button class="pixel-button" style="padding: 4px 8px">
+                封禁
+              </button>
+              <button
+                class="pixel-button"
+                style="padding: 4px 8px; background: var(--accent-color)"
+              >
+                设为管理
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- 更多用户条目... -->
+        <!-- 新增管理员用户 -->
+        <div
+          class="pixel-card"
+          style="
+            margin-bottom: 20px;
+            display: grid;
+            grid-template-columns: 60px 1fr 150px;
+            gap: 20px;
+            align-items: center;
+          "
+          data-id="1002"
+        >
+          <div
+            class="user-avatar"
+            style="
+              background: #6c5ce7;
+              width: 60px;
+              height: 60px;
+              border-radius: 50%;
+            "
+          ></div>
+          <div>
+            <h3>像素导师</h3>
+            <div
+              class="user-meta"
+              style="display: flex; gap: 15px; margin-top: 8px"
+            >
+              <span>注册时间：2023-12-01</span>
+              <span>作品数：56</span>
+            </div>
+          </div>
+          <div style="text-align: right">
+            <div
+              class="user-status pixel-card"
+              style="background: #a55eea; padding: 4px 8px; margin-bottom: 8px"
+            >
+              管理员
+            </div>
+            <div class="action-buttons" style="display: flex; gap: 8px">
+              <button class="pixel-button" style="padding: 4px 8px">
+                封禁
+              </button>
+              <button
+                class="pixel-button"
+                style="padding: 4px 8px; background: #ff4757"
+              >
+                撤销权限
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 新增被封禁用户 -->
+        <div
+          class="pixel-card"
+          style="
+            margin-bottom: 20px;
+            display: grid;
+            grid-template-columns: 60px 1fr 150px;
+            gap: 20px;
+            align-items: center;
+          "
+          data-id="1003"
+        >
+          <div
+            class="user-avatar"
+            style="
+              background: #ff7675;
+              width: 60px;
+              height: 60px;
+              border-radius: 0%;
+            "
+          ></div>
+          <div>
+            <h3>违规用户</h3>
+            <div
+              class="user-meta"
+              style="display: flex; gap: 15px; margin-top: 8px"
+            >
+              <span>注册时间：2024-03-01</span>
+              <span>作品数：0</span>
+            </div>
+          </div>
+          <div style="text-align: right">
+            <div
+              class="user-status pixel-card"
+              style="background: #d1d8e0; padding: 4px 8px; margin-bottom: 8px"
+            >
+              已封禁
+            </div>
+            <div class="action-buttons" style="display: flex; gap: 8px">
+              <button class="pixel-button" style="padding: 4px 8px">
+                解封
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 新增新注册用户 -->
+        <div
+          class="pixel-card"
+          style="
+            margin-bottom: 20px;
+            display: grid;
+            grid-template-columns: 60px 1fr 150px;
+            gap: 20px;
+            align-items: center;
+          "
+          data-id="1004"
+        >
+          <div
+            class="user-avatar"
+            style="
+              background: #00b894;
+              width: 60px;
+              height: 60px;
+              border-radius: 0%;
+            "
+          ></div>
+          <div>
+            <h3>新手上路</h3>
+            <div
+              class="user-meta"
+              style="display: flex; gap: 15px; margin-top: 8px"
+            >
+              <span>注册时间：2024-03-20</span>
+              <span>作品数：3</span>
+            </div>
+          </div>
+          <div style="text-align: right">
+            <div
+              class="user-status pixel-card"
+              style="
+                background: var(--accent-color2);
+                padding: 4px 8px;
+                margin-bottom: 8px;
+              "
+            >
+              新用户
+            </div>
+            <div class="action-buttons" style="display: flex; gap: 8px">
+              <button class="pixel-button" style="padding: 4px 8px">
+                封禁
+              </button>
+              <button
+                class="pixel-button"
+                style="padding: 4px 8px; background: var(--accent-color)"
+              >
+                发消息
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 新增分页 -->
+      <div
+        class="pagination"
+        style="
+          margin-top: 30px;
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+        "
+      >
+        <button class="pixel-button">上一页</button>
+        <button class="pixel-button active">1</button>
+        <button class="pixel-button">2</button>
+        <button class="pixel-button">3</button>
+        <span style="padding: 12px 24px">...</span>
+        <button class="pixel-button">10</button>
+        <button class="pixel-button">下一页</button>
+      </div>
+    </div>
+  </body>
+</html>

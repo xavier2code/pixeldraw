@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <!-- 复用主页样式 -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>社区 - 像素涂鸦社</title>
+    <!-- 修改为正确引用方式 -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <nav class="pixel-border">
+      <ul>
+        <li><a href="index.html" class="pixel-button">首页</a></li>
+        <li><a href="portfolio.html" class="pixel-button">作品集</a></li>
+        <li><a href="community.html" class="pixel-button active">社区</a></li>
+        <li><a href="about.html" class="pixel-button">关于</a></li>
+        <li><a href="help-center.html" class="pixel-button">帮助</a></li>
+        <!-- 新增搜索框 -->
+        <li class="search-container">
+          <input type="text" placeholder="搜索作品..." class="pixel-search" />
+          <button class="pixel-button">搜索</button>
+        </li>
+        <!-- 新增登录注册按钮 -->
+        <li class="auth-buttons">
+          <a href="login.html" class="pixel-button">登录</a>
+          <a href="register.html" class="pixel-button">注册</a>
+        </li>
+      </ul>
+    </nav>
+    <div
+      class="container pixel-border"
+      style="margin: 40px 20px; padding: 30px; background: white"
+    >
+      <h1 style="text-align: center; margin-bottom: 40px">留言板</h1>
+      <!-- 留言列表 -->
+      <div class="pixel-border forum-section">
+        <!-- 原有留言 -->
+        <div class="pixel-card post-card">
+          <div class="author-avatar" style="background: #ff6b6b"></div>
+          <div class="post-content">
+            <h4>如何绘制像素光影？</h4>
+            <p>最后回复：2小时前 · 浏览：328</p>
+          </div>
+        </div>
+
+        <!-- 新增留言条目 -->
+        <div class="pixel-card post-card">
+          <div class="author-avatar" style="background: #4ecdc4"></div>
+          <div class="post-content">
+            <h4>新人求教：颜色搭配技巧</h4>
+            <p>最后回复：5小时前 · 浏览：154</p>
+          </div>
+        </div>
+
+        <div class="pixel-card post-card">
+          <div class="author-avatar" style="background: #ffd700"></div>
+          <div class="post-content">
+            <h4>每周挑战：像素风景图</h4>
+            <p>最后回复：1天前 · 浏览：892</p>
+          </div>
+        </div>
+
+        <div class="pixel-card post-card">
+          <div class="author-avatar" style="background: #a855f7"></div>
+          <div class="post-content">
+            <h4>工具推荐：Aseprite 使用技巧</h4>
+            <p>最后回复：2天前 · 浏览：1.2k</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 新增分页 -->
+      <div
+        class="pagination"
+        style="
+          margin-top: 30px;
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+        "
+      >
+        <button class="pixel-button">上一页</button>
+        <button class="pixel-button active">1</button>
+        <button class="pixel-button">2</button>
+        <button class="pixel-button">3</button>
+        <span style="padding: 12px 24px">...</span>
+        <button class="pixel-button">10</button>
+        <button class="pixel-button">下一页</button>
+      </div>
+    </div>
+  </body>
+  <style>
+    /* 当前页面按钮样式 */
+    .active {
+      background: var(--accent-color2) !important;
+      box-shadow: 4px 4px 0 var(--pixel-color) !important;
+    }
+  </style>
+</html>

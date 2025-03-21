@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>标签分类 - 像素涂鸦社</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <nav class="pixel-border">
+      <!-- 保持导航栏统一 -->
+      <ul>
+        <li><a href="index.html" class="pixel-button">首页</a></li>
+        <li><a href="portfolio.html" class="pixel-button active">作品集</a></li>
+        <li><a href="community.html" class="pixel-button">社区</a></li>
+        <li><a href="about.html" class="pixel-button">关于</a></li>
+        <li><a href="help-center.html" class="pixel-button">帮助</a></li>
+        <li class="search-container">
+          <input type="text" placeholder="搜索标签..." class="pixel-search" />
+          <button class="pixel-button">搜索</button>
+        </li>
+        <li class="auth-buttons">
+          <a href="profile.html" class="pixel-button">我的主页</a>
+          <a href="notifications.html" class="pixel-button">消息(99+)</a>
+          <a href="upload.html" class="pixel-button">上传</a>
+          <a href="index.html" class="pixel-button">退出</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div
+      class="pixel-border container"
+      style="margin: 40px 20px; padding: 30px; background: white"
+    >
+      <h2 style="text-align: center; margin-bottom: 30px">全部标签</h2>
+
+      <div
+        class="tags-grid"
+        style="
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+          gap: 20px;
+        "
+      >
+        <!-- 示例标签 -->
+        <a href="#" class="tag-card pixel-card">
+          <h3>游戏角色</h3>
+          <p>3 件作品</p>
+        </a>
+        <a href="#" class="tag-card pixel-card">
+          <h3>像素场景</h3>
+          <p>18 件作品</p>
+        </a>
+        <a href="#" class="tag-card pixel-card">
+          <h3>城市景观</h3>
+          <p>4 件作品</p>
+        </a>
+        <a href="#" class="tag-card pixel-card">
+          <h3>未来风格</h3>
+          <p>8 件作品</p>
+        </a>
+        <a href="#" class="tag-card pixel-card">
+          <h3>32X32</h3>
+          <p>15 件作品</p>
+        </a>
+        <a href="#" class="tag-card pixel-card">
+          <h3>小电器</h3>
+          <p>1 件作品</p>
+        </a>
+        <!-- 更多标签... -->
+      </div>
+
+      <div style="padding: 10px"></div>
+
+      <!-- 作品展示网格 -->
+      <div class="artwork-grid" style="margin-bottom: 30px">
+        <a href="detail.html" class="card-link">
+          <div class="pixel-card">
+            <div
+              class="thumbnail"
+              style="background: #e16a0f; height: 180px"
+            ></div>
+            <h3>海底世界</h3>
+            <p>作者：像素达人</p>
+          </div>
+        </a>
+        <a href="detail.html" class="card-link">
+          <div class="pixel-card">
+            <div
+              class="thumbnail"
+              style="background: #29c0c8; height: 180px"
+            ></div>
+            <h3>美人鱼</h3>
+            <p>作者：可乐配鸡翅</p>
+          </div>
+        </a>
+        <a href="detail.html" class="card-link">
+          <div class="pixel-card">
+            <div
+              class="thumbnail"
+              style="background: #d094d5; height: 180px"
+            ></div>
+            <h3>背包</h3>
+            <p>作者：张像素</p>
+          </div>
+        </a>
+        <!-- 更多作品... -->
+      </div>
+
+      <!-- 新增分页 -->
+      <div
+        class="pagination"
+        style="
+          margin-top: 30px;
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+        "
+      >
+        <button class="pixel-button">上一页</button>
+        <button class="pixel-button active">1</button>
+        <button class="pixel-button">2</button>
+        <button class="pixel-button">3</button>
+        <span style="padding: 12px 24px">...</span>
+        <button class="pixel-button">10</button>
+        <button class="pixel-button">下一页</button>
+      </div>
+    </div>
+  </body>
+</html>

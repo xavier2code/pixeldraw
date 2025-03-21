@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>内容审核 - 像素涂鸦社</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- 复用管理导航 -->
+    <nav class="pixel-border admin-nav">
+      <ul>
+        <li><a href="dashboard.html" class="pixel-button">仪表盘</a></li>
+        <li>
+          <a href="content-review.html" class="pixel-button active">内容审核</a>
+        </li>
+        <li>
+          <a href="user-management.html" class="pixel-button">用户管理</a>
+        </li>
+        <li class="auth-buttons" style="margin-left: auto">
+          <a href="index.html" class="pixel-button">返回前台</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div
+      class="pixel-border container"
+      style="margin: 40px 20px; padding: 30px;"
+    >
+      <!-- 审核控制栏 -->
+      <div
+        class="review-controls pixel-border"
+        style="margin-bottom: 30px; display: flex; gap: 15px; background: whitesmoke;"
+      >
+        <input
+          type="text"
+          placeholder="搜索待审内容..."
+          class="pixel-search"
+          style="flex-grow: 1"
+        />
+        <div class="filter-buttons">
+          <button class="pixel-button active">全部</button>
+          <button class="pixel-button">作品</button>
+          <button class="pixel-button">评论</button>
+        </div>
+      </div>
+
+      <!-- 待审内容列表 -->
+      <div class="review-list">
+        <!-- 单条待审记录 -->
+        <div
+          class="pixel-card"
+          style="
+            margin-bottom: 20px;
+            display: flex;
+            gap: 20px;
+            align-items: start;
+          "
+        >
+          <div
+            class="thumbnail"
+            style="background: #ff6b6b; width: 120px; height: 120px"
+          ></div>
+          <div style="flex-grow: 1">
+            <h3>海底世界</h3>
+            <p class="report-reason" style="color: #666">举报原因：涉嫌抄袭</p>
+            <div
+              class="meta-data"
+              style="display: flex; gap: 15px; margin: 10px 0"
+            >
+              <span>作者：像素达人</span>
+              <span>上传时间：2024-03-15</span>
+            </div>
+            <div class="action-buttons" style="display: flex; gap: 10px">
+              <button class="pixel-button-pass">通过</button>
+              <button class="pixel-button-refuse">拒绝</button>
+              <a href="detail.html" class="pixel-button">查看详情</a>
+            </div>
+          </div>
+          <div
+            class="content-status pixel-card"
+            style="background: var(--accent-color2); padding: 8px 12px"
+          >
+            待初审
+          </div>
+        </div>
+        <!-- 新增太空主题条目 -->
+        <div
+          class="pixel-card"
+          style="
+            margin-bottom: 20px;
+            display: flex;
+            gap: 20px;
+            align-items: start;
+          "
+          data-id="2345"
+        >
+          <div
+            class="thumbnail"
+            style="background: #6c5ce7; width: 120px; height: 120px"
+          ></div>
+          <div style="flex-grow: 1">
+            <h3>像素太空站</h3>
+            <p class="report-reason" style="color: #666">
+              举报原因：包含未授权商业元素
+            </p>
+            <div
+              class="meta-data"
+              style="display: flex; gap: 15px; margin: 10px 0"
+            >
+              <span>作者：星空创造者</span>
+              <span>上传时间：2024-03-18</span>
+            </div>
+            <div class="action-buttons" style="display: flex; gap: 10px">
+              <button class="pixel-button-pass">通过</button>
+              <button class="pixel-button-refuse">拒绝</button>
+              <a href="detail.html" class="pixel-button">查看详情</a>
+            </div>
+          </div>
+          <div
+            class="content-status pixel-card"
+            style="background: #ffeaa7; padding: 8px 12px"
+          >
+            争议内容
+          </div>
+        </div>
+        <!-- 新增动物主题条目 -->
+        <div
+          class="pixel-card"
+          style="
+            margin-bottom: 20px;
+            display: flex;
+            gap: 20px;
+            align-items: start;
+          "
+          data-id="2346"
+        >
+          <div
+            class="thumbnail"
+            style="background: #00b894; width: 120px; height: 120px"
+          ></div>
+          <div style="flex-grow: 1">
+            <h3>森林伙伴</h3>
+            <p class="report-reason" style="color: #666">
+              举报原因：疑似AI生成
+            </p>
+            <div
+              class="meta-data"
+              style="display: flex; gap: 15px; margin: 10px 0"
+            >
+              <span>作者：自然之友</span>
+              <span>上传时间：2024-03-17</span>
+            </div>
+            <div class="action-buttons" style="display: flex; gap: 10px">
+              <button class="pixel-button">通过</button>
+              <button class="pixel-button">拒绝</button>
+              <a href="detail.html" class="pixel-button">查看详情</a>
+            </div>
+          </div>
+          <div
+            class="content-status pixel-card"
+            style="background: var(--accent-color2); padding: 8px 12px"
+          >
+            待复核
+          </div>
+        </div>
+        <!-- 新增复古游戏条目 -->
+        <div
+          class="pixel-card"
+          style="
+            margin-bottom: 20px;
+            display: flex;
+            gap: 20px;
+            align-items: start;
+          "
+          data-id="2347"
+        >
+          <div
+            class="thumbnail"
+            style="background: #e84393; width: 120px; height: 120px"
+          ></div>
+          <div style="flex-grow: 1">
+            <h3>复古游戏厅</h3>
+            <p class="report-reason" style="color: #666">
+              举报原因：低分辨率素材
+            </p>
+            <div
+              class="meta-data"
+              style="display: flex; gap: 15px; margin: 10px 0"
+            >
+              <span>作者：怀旧玩家</span>
+              <span>上传时间：2024-03-16</span>
+            </div>
+            <div class="action-buttons" style="display: flex; gap: 10px">
+              <button class="pixel-button">通过</button>
+              <button class="pixel-button">拒绝</button>
+              <a href="detail.html" class="pixel-button">查看详情</a>
+            </div>
+          </div>
+          <div
+            class="content-status pixel-card"
+            style="background: #ff7675; padding: 8px 12px"
+          >
+            高风险
+          </div>
+        </div>
+      </div>
+
+      <!-- 新增分页 -->
+      <div
+        class="pagination"
+        style="
+          margin-top: 30px;
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+        "
+      >
+        <button class="pixel-button">上一页</button>
+        <button class="pixel-button active">1</button>
+        <button class="pixel-button">2</button>
+        <button class="pixel-button">3</button>
+        <span style="padding: 12px 24px">...</span>
+        <button class="pixel-button">10</button>
+        <button class="pixel-button">下一页</button>
+      </div>
+    </div>
+  </body>
+</html>

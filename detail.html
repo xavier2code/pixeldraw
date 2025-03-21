@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>作品详情 - 像素涂鸦社</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <nav class="pixel-border">
+      <ul>
+        <li><a href="index.html" class="pixel-button">首页</a></li>
+        <li><a href="portfolio.html" class="pixel-button active">作品集</a></li>
+        <li><a href="community.html" class="pixel-button">社区</a></li>
+        <li><a href="about.html" class="pixel-button">关于</a></li>
+        <li><a href="help-center.html" class="pixel-button">帮助</a></li>
+        <!-- 新增搜索框 -->
+        <li class="search-container">
+          <input type="text" placeholder="搜索作品..." class="pixel-search" />
+          <button class="pixel-button">搜索</button>
+        </li>
+        <!-- 新增登录注册按钮 -->
+        <li class="auth-buttons">
+          <a href="login.html" class="pixel-button">登录</a>
+          <a href="register.html" class="pixel-button">注册</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div
+      class="pixel-border artwork-detail"
+      style="margin: 40px 20px; padding: 30px; background: white"
+    >
+      <div
+        class="artwork-viewer"
+        style="
+          background: #ff9a9e;
+          height: 400px;
+          margin-bottom: 30px;
+          position: relative;
+        "
+      ></div>
+
+      <div class="pixel-card" style="max-width: 600px; margin: 0 auto">
+        <h2 style="text-align: center">像素城市</h2>
+
+        <!-- 新增标签区域 -->
+        <div class="artwork-tags">
+          <a href="tag.html" class="topic-tag">城市景观</a>
+          <a href="tag.html" class="topic-tag">未来风格</a>
+          <a href="404.html" class="topic-tag">32x32</a>
+        </div>
+
+        <div
+          class="meta-data"
+          style="
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+          "
+        >
+          <div class="pixel-card" style="padding: 10px">
+            <span>作者</span>
+            <h4>张像素</h4>
+          </div>
+          <div class="pixel-card" style="padding: 10px">
+            <span>尺寸</span>
+            <h4>32x32</h4>
+          </div>
+          <div class="pixel-card" style="padding: 10px">
+            <span>创作时间</span>
+            <h4>2024</h4>
+          </div>
+        </div>
+        <button class="pixel-button" style="margin-top: 20px; width: 100%">
+          下载源文件 (PNG)
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

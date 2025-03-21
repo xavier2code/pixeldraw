@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <!-- 复用主页样式 -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>作品集 - 像素涂鸦社</title>
+    <!-- 修改为正确引用方式 -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <nav class="pixel-border">
+      <ul>
+        <li><a href="index.html" class="pixel-button">首页</a></li>
+        <li><a href="portfolio.html" class="pixel-button active">作品集</a></li>
+        <li><a href="community.html" class="pixel-button">社区</a></li>
+        <li><a href="about.html" class="pixel-button">关于</a></li>
+        <li><a href="help-center.html" class="pixel-button">帮助</a></li>
+        <!-- 新增搜索框 -->
+        <li class="search-container">
+          <input type="text" placeholder="搜索作品..." class="pixel-search" />
+          <button class="pixel-button">搜索</button>
+        </li>
+        <!-- 新增登录注册按钮 -->
+        <li class="auth-buttons">
+          <a href="login.html" class="pixel-button">登录</a>
+          <a href="register.html" class="pixel-button">注册</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div
+      class="container pixel-border"
+      style="margin: 40px 20px; padding: 30px; background: white"
+    >
+      <h1 style="text-align: center; margin-bottom: 40px">最新作品</h1>
+      <!-- 作品网格 -->
+      <div class="pixel-grid">
+        <!-- 原有作品卡片保持不变... -->
+
+        <!-- 新增作品卡片 -->
+        <a href="detail.html" class="card-link">
+          <div class="pixel-card">
+            <div class="thumbnail" style="background: #4ecdc4"></div>
+            <h3>海底世界</h3>
+            <p>64x64 像素画 · 256色</p>
+          </div>
+        </a>
+        <a href="detail.html" class="card-link">
+          <div class="pixel-card">
+            <div class="thumbnail" style="background: #ffd700"></div>
+            <h3>太空飞船</h3>
+            <p>48x48 像素画 · 动态效果</p>
+          </div>
+        </a>
+        <a href="detail.html" class="card-link">
+          <div class="pixel-card">
+            <div class="thumbnail" style="background: #a855f7"></div>
+            <h3>中世纪城堡</h3>
+            <p>128x128 像素画 · 手绘风格</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- 新增分页 -->
+      <div
+        class="pagination"
+        style="
+          margin-top: 30px;
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+        "
+      >
+        <button class="pixel-button">上一页</button>
+        <button class="pixel-button active">1</button>
+        <button class="pixel-button">2</button>
+        <button class="pixel-button">3</button>
+        <span style="padding: 12px 24px">...</span>
+        <button class="pixel-button">10</button>
+        <button class="pixel-button">下一页</button>
+      </div>
+    </div>
+  </body>
+
+  <style>
+    /* 在原有样式基础上新增 */
+    .pixel-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 20px;
+    }
+
+    .pixel-card {
+      border: 3px solid var(--pixel-color);
+      padding: 15px;
+      background: white;
+      transition: transform 0.2s;
+    }
+
+    .pixel-card:hover {
+      transform: translate(6px, 6px);
+      box-shadow: 8px 8px 0 var(--pixel-color);
+    }
+
+    .thumbnail {
+      height: 200px;
+      margin-bottom: 15px;
+      background: var(--accent-color2);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* 当前页面按钮样式 */
+    .active {
+      background: var(--accent-color2) !important;
+      box-shadow: 4px 4px 0 var(--pixel-color) !important;
+    }
+
+    /* 添加卡片链接样式 */
+    .card-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+  </style>
+</html>

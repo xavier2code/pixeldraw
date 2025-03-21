@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>帮助中心 - 像素涂鸦社</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <nav class="pixel-border">
+      <ul>
+        <li><a href="index.html" class="pixel-button">首页</a></li>
+        <li><a href="portfolio.html" class="pixel-button">作品集</a></li>
+        <li><a href="community.html" class="pixel-button">社区</a></li>
+        <li><a href="about.html" class="pixel-button">关于</a></li>
+        <li><a href="help-center.html" class="pixel-button active">帮助</a></li>
+        <!-- 新增搜索框 -->
+        <li class="search-container">
+          <input type="text" placeholder="搜索作品..." class="pixel-search" />
+          <button class="pixel-button">搜索</button>
+        </li>
+        <!-- 新增登录注册按钮 -->
+        <li class="auth-buttons">
+          <a href="login.html" class="pixel-button">登录</a>
+          <a href="register.html" class="pixel-button">注册</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- 新增hero区块保持首页风格 -->
+    <div class="hero pixel-border" style="background: white">
+      <h1>像素帮助中心</h1>
+      <p>遇到问题？点点这里找答案</p>
+    </div>
+
+    <!-- 内容容器与首页边距统一 -->
+    <div
+      class="pixel-border container"
+      style="margin: 40px 20px; padding: 30px; background: white"
+    >
+      <div class="stats-grid">
+        <!-- 复用首页的网格系统 -->
+        <!-- 帮助导航区块 -->
+        <div class="help-nav pixel-card">
+          <h3>常见问题分类</h3>
+          <ul class="category-list">
+            <li><a href="#upload-guide" class="pixel-button">上传指南</a></li>
+            <li><a href="#account-mgmt" class="pixel-button">账户管理</a></li>
+          </ul>
+        </div>
+
+        <!-- FAQ内容区块 -->
+        <div class="faq-section">
+          <div class="pixel-card">
+            <h4 id="upload-guide">如何上传作品？</h4>
+            <p>逐步操作说明...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

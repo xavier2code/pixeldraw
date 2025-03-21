@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>上传作品 - 像素涂鸦社</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <nav class="pixel-border">
+      <!-- 保持导航栏与其它页面一致 -->
+      <ul>
+        <li><a href="index.html" class="pixel-button">首页</a></li>
+        <li><a href="portfolio.html" class="pixel-button">作品集</a></li>
+        <li><a href="community.html" class="pixel-button">社区</a></li>
+        <li><a href="about.html" class="pixel-button">关于</a></li>
+        <li><a href="help-center.html" class="pixel-button">帮助</a></li>
+        <li class="search-container">
+          <input type="text" placeholder="搜索作品..." class="pixel-search" />
+          <button class="pixel-button">搜索</button>
+        </li>
+        <li class="auth-buttons">
+          <a href="profile.html" class="pixel-button">我的主页</a>
+          <a href="upload.html" class="pixel-button active">上传作品</a>
+          <a href="index.html" class="pixel-button">退出</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div
+      class="pixel-border artwork-detail"
+      style="margin: 40px 20px; padding: 30px; background: white"
+    >
+      <div class="pixel-card" style="max-width: 800px; margin: 0 auto">
+        <h2 style="text-align: center; margin-bottom: 30px">上传新作品</h2>
+
+        <div
+          class="upload-grid"
+          style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px"
+        >
+          <!-- 左侧上传区域 -->
+          <div
+            class="upload-dropzone pixel-border"
+            style="
+              height: 400px;
+              background: var(--bg-color);
+              position: relative;
+            "
+          >
+            <input type="file" id="file-upload" hidden accept="image/png" />
+            <label for="file-upload" class="pixel-button">
+              点击上传 PNG 文件
+            </label>
+            <div class="preview-area" style="display: none"></div>
+          </div>
+
+          <!-- 右侧设置区域 -->
+          <div class="upload-settings">
+            <div class="form-group">
+              <label>作品标题</label>
+              <input
+                type="text"
+                class="pixel-search"
+                placeholder="请输入标题（最多24字）"
+              />
+            </div>
+
+            <div class="form-group" style="margin: 20px 0">
+              <label>画布尺寸</label>
+              <div
+                class="size-grid"
+                style="
+                  display: grid;
+                  grid-template-columns: repeat(3, 1fr);
+                  gap: 10px;
+                "
+              >
+                <button class="pixel-button">32x32</button>
+                <button class="pixel-button">64x64</button>
+                <button class="pixel-button active">128x128</button>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>调色板</label>
+              <select class="pixel-search">
+                <option>默认16色</option>
+                <option>NES 调色板</option>
+                <option>GameBoy 4色</option>
+              </select>
+            </div>
+
+            <button class="pixel-button" style="width: 100%; margin-top: 30px">
+              <span style="font-size: 1.2em">★</span> 立即发布
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

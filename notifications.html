@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>消息中心 - 像素涂鸦社</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <nav class="pixel-border">
+      <!-- 导航栏与profile.html一致 -->
+      <ul>
+        <li><a href="index.html" class="pixel-button">首页</a></li>
+        <li><a href="portfolio.html" class="pixel-button">作品集</a></li>
+        <li><a href="community.html" class="pixel-button">社区</a></li>
+        <li><a href="about.html" class="pixel-button">关于</a></li>
+        <li><a href="help-center.html" class="pixel-button">帮助</a></li>
+        <li class="search-container">
+          <input type="text" placeholder="搜索作品..." class="pixel-search" />
+          <button class="pixel-button">搜索</button>
+        </li>
+        <li class="auth-buttons">
+          <a href="profile.html" class="pixel-button">我的主页</a>
+          <a href="notifications.html" class="pixel-button">消息(99+)</a>
+          <a href="upload.html" class="pixel-button">上传作品</a>
+          <a href="index.html" class="pixel-button">退出</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div
+      class="pixel-border auth-container"
+      style="
+        margin: 40px auto;
+        padding: 30px;
+        background: white;
+        max-width: 800px;
+      "
+    >
+      <h2 style="text-align: center; margin-bottom: 30px">未读通知 (3)</h2>
+
+      <!-- 通知列表 -->
+      <div class="notification-list">
+        <div class="pixel-card" style="margin-bottom: 20px; padding: 15px">
+          <h3>👍 新获赞通知</h3>
+          <p>用户「像素达人」赞了您的作品《海底世界》</p>
+          <span class="notification-time">2小时前</span>
+        </div>
+
+        <div class="pixel-card" style="margin-bottom: 20px; padding: 15px">
+          <h3>💬 新评论通知</h3>
+          <p>用户「艺术先锋」评论了您的作品：「这个配色太棒了！」</p>
+          <span class="notification-time">5小时前</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

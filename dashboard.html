@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>管理仪表盘 - 像素涂鸦社</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- 管理后台专用导航 -->
+    <nav class="pixel-border admin-nav">
+      <ul>
+        <li><a href="dashboard.html" class="pixel-button active">仪表盘</a></li>
+        <li><a href="content-review.html" class="pixel-button">内容审核</a></li>
+        <li>
+          <a href="user-management.html" class="pixel-button">用户管理</a>
+        </li>
+        <li class="auth-buttons" style="margin-left: auto">
+          <a href="index.html" class="pixel-button">返回前台</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div
+      class="pixel-border container"
+      style="margin: 40px 20px; padding: 30px; background: white"
+    >
+      <!-- 核心统计模块 -->
+      <div class="stats-grid">
+        <div class="pixel-card">
+          <h3>📦 待审核作品</h3>
+          <p class="stat-number">12 件</p>
+          <a href="content-review.html" class="pixel-button">立即处理</a>
+        </div>
+        <div class="pixel-card">
+          <h3>👥 新注册用户</h3>
+          <p class="stat-number">5 位</p>
+          <a href="user-management.html" class="pixel-button">查看详情</a>
+        </div>
+        <div class="pixel-card">
+          <h3>📈 今日访问量</h3>
+          <p class="stat-number">1,234 次</p>
+          <div
+            class="sparkline"
+            style="height: 40px; background: var(--accent-color2)"
+          ></div>
+        </div>
+      </div>
+
+      <!-- 双栏布局 -->
+      <div
+        class="dashboard-grid"
+        style="
+          display: grid;
+          grid-template-columns: 2fr 1fr;
+          gap: 30px;
+          margin-top: 40px;
+        "
+      >
+        <!-- 最新动态 -->
+        <div class="pixel-card">
+          <h3>📢 最新动态</h3>
+          <ul class="activity-list">
+            <li>用户「像素达人」上传了新作品</li>
+            <li>「海底世界」收到3条举报</li>
+            <li>系统于08:00完成每日备份</li>
+          </ul>
+        </div>
+
+        <!-- 快速操作 -->
+        <div class="pixel-card quick-actions">
+          <h3>⚡ 快速操作</h3>
+          <button class="pixel-button">发送全站通知</button>
+          <button class="pixel-button">清除缓存</button>
+          <button class="pixel-button">生成数据报表</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

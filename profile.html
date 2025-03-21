@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>个人主页 - 像素涂鸦社</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <!-- 导航栏 -->
+    <nav class="pixel-border">
+      <ul>
+        <li><a href="index.html" class="pixel-button">首页</a></li>
+        <li><a href="portfolio.html" class="pixel-button">作品集</a></li>
+        <li><a href="community.html" class="pixel-button">社区</a></li>
+        <li><a href="about.html" class="pixel-button">关于</a></li>
+        <li><a href="help-center.html" class="pixel-button">帮助</a></li>
+        <li class="search-container">
+          <input type="text" placeholder="搜索作品..." class="pixel-search" />
+          <button class="pixel-button">搜索</button>
+        </li>
+        <li class="auth-buttons">
+          <a href="profile.html" class="pixel-button active">我的主页</a>
+          <a href="notifications.html" class="pixel-button">消息(99+)</a>
+          <a href="upload.html" class="pixel-button">上传作品</a>
+          <a href="index.html" class="pixel-button">退出</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- 主体内容 -->
+    <div
+      class="pixel-border auth-container"
+      style="
+        margin: 40px auto;
+        padding: 30px;
+        background: white;
+        max-width: 800px;
+      "
+    >
+      <!-- 用户信息区 -->
+      <div class="user-profile">
+        <!-- 头像与基本信息 -->
+        <div class="profile-header">
+          <div
+            class="pixel-border avatar-container"
+            style="
+              width: 120px;
+              height: 120px;
+              background: var(--pixel-color);
+              margin-right: 30px;
+            "
+          >
+            <!-- 头像占位符 -->
+          </div>
+          <div>
+            <h2 style="margin: 0 0 10px">像素艺术家_小明</h2>
+            <p style="color: #666; margin: 0">注册时间：2023年8月</p>
+            <button class="pixel-button" style="margin-top: 15px">
+              <a
+                href="settings.html"
+                style="text-emphasis: none; color: inherit"
+              >
+                编辑资料
+              </a>
+            </button>
+          </div>
+        </div>
+
+        <!-- 统计卡片 -->
+        <div class="stats-grid" style="margin-top: 30px">
+          <div class="pixel-card" style="background: var(--bg-color)">
+            <h3>作品统计</h3>
+            <p>发布作品：28 个</p>
+            <p>收藏作品：156 个</p>
+          </div>
+          <div class="pixel-card" style="background: var(--bg-color)">
+            <h3>粉丝互动</h3>
+            <p>粉丝数量：1.2k</p>
+            <p>获赞总数：5.6k</p>
+          </div>
+        </div>
+
+        <!-- 作品展示 -->
+        <h3 style="margin: 40px 0 20px">最新作品</h3>
+        <div class="artwork-grid">
+          <!-- 作品示例 -->
+          <div class="pixel-card">
+            <div style="height: 150px; background: #f0f0f0"></div>
+            <p style="margin: 10px 0">像素城市</p>
+          </div>
+          <!-- 更多作品... -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
