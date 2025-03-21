@@ -19,10 +19,6 @@ body {
   line-height: 1.6;
 }
 
-* {
-  font-family: inherit;
-}
-
 button,
 input,
 textarea,
@@ -425,20 +421,6 @@ select.pixel-search {
   background: var(--accent-color2);
   padding: 10px;
   border: 2px solid var(--pixel-color);
-}
-
-/* 管理后台导航 */
-.admin-nav {
-  background: var(--pixel-color);
-  padding: 15px 30px;
-}
-
-.admin-nav .pixel-button {
-  box-shadow: none;
-}
-
-.admin-nav .active {
-  background: var(--accent-color2);
 }
 
 /* 统计数字样式 */
